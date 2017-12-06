@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE eventlist
+[
+  <!ELEMENT eventlist (event*)>
+  <!ELEMENT event (name, date, act, venue, organiser, ticket)>
+  
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT date (day, time)>
+  <!ELEMENT act (#PCDATA)>
+  <!ELEMENT venue (venue_name, location)>
+  <!ELEMENT organiser (#PCDATA)>
+  <!ELEMENT ticket (category, price)>
+  
+  <!ELEMENT day (#PCDATA)>
+  <!ELEMENT time (#PCDATA)>
+  
+  <!ELEMENT venue_name (#PCDATA)>
+  <!ELEMENT location (#PCDATA)>
+  
+  <!ELEMENT category (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  
+  <!ATTLIST ticket amount_available CDATA #REQUIRED>
+]>
+
+<eventlist>
+  <event>
+    <name>Ed Sheeran January Tour</name>
+    <date>
+      <day>20 January 2018</day>
+      <time>17:00</time>
+    </date>
+    <act>Ed Sheeran</act> 
+    <venue>
+      <venue_name>3 Arena</venue_name>
+      <location>Dublin, Ireland</location>
+    </venue>
+    <organiser>MusicOrg Ltd.</organiser>
+    <ticket amount_available = "440">
+      <category>Music</category>
+      <price>130.00</price>
+    </ticket>
+  </event>
+
+  <event>
+    <name>Rihanna Winter Tour</name>
+    <date>
+      <day>15 December 2017</day>
+      <time>21:00</time>
+    </date>
+    <act>Rihanna</act> 
+    <venue>
+      <venue_name>London Stadium</venue_name>
+      <location>Stratford, London, UK</location>
+    </venue>
+    <organiser>AnotherMusicOrg Inc.</organiser>
+    <ticket amount_available = "1200">
+      <category>Music</category>
+      <price>150.00</price>
+    </ticket>
+  </event>
+  
+    <event>
+    <name>The Merchant of Venice</name>
+    <date>
+      <day>21 October 2018</day>
+      <time>15:00</time>
+    </date>
+    <act>Royal Shakespeare Company</act> 
+    <venue>
+      <venue_name>Royal Shakespeare Theatre</venue_name>
+      <location>Stratford-upon-Avon, UK</location>
+    </venue>
+    <organiser>Royal Shakespeare Company</organiser>
+    <ticket amount_available = "800">
+      <category>Theatre</category>
+      <price>60.00</price>
+    </ticket>
+  </event>
+
+
+</eventlist>

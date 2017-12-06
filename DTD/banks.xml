@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE banks
+[
+  <!ELEMENT banks (bank*)>
+  <!ELEMENT bank (name, address, sort_code, contact_details)>
+  
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT sort_code (#PCDATA)>
+  <!ELEMENT contact_details (email, phone_number)>
+  
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT phone_number (#PCDATA)>
+]>
+<banks>
+  <bank>
+    <name>Bank of Ireland</name>
+    <address>Main Street, Swords, Co. Dublin, Ireland</address>
+    <sort_code>BOI123456</sort_code>
+    <contact_details>
+      <email>bankofirelandswords@email.com</email>
+      <phone_number>+353123456789</phone_number>
+    </contact_details>
+  </bank>
+
+  <bank>
+    <name>Ulster Bank</name>
+    <address>Dublin, Ireland</address>
+    <sort_code>UBN123456</sort_code>
+    <contact_details>
+      <email>ulsterbankdublin@email.com</email>
+      <phone_number>+353987654321</phone_number>
+    </contact_details>
+  </bank>
+  
+  <bank>
+    <name>Permanent TSB</name>
+    <address>Cork, Ireland</address>
+    <sort_code>TSB123456</sort_code>
+    <contact_details>
+      <email>permanenttsbcork@email.com</email>
+      <phone_number>+353918273645</phone_number>
+    </contact_details>
+  </bank>
+  
+</banks>
