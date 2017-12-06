@@ -9,3 +9,7 @@ Adam:
 Matthew:
 1. Events
 2. Banks
+
+Tobias Hallen:
+1. Customer
+2. TicketSupplier/Event Partner
