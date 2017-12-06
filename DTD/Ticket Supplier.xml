@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Ticket_Supplier_Info [ <!ELEMENT Ticket_Supplier_Info (Ticket_Supplier)*>
+<!ELEMENT Ticket_Supplier (Name, Event, Address, Telephone, Email)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Event (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Telephone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+]>
+
+<Ticket_Supplier_Info>
+  <Ticket_Supplier>
+    <Name>John Doe Inc.</Name>
+    <Event>Concert</Event>
+    <Address>15 Goldbrook Sq, Castleknock, Dublin 15</Address>
+    <Telephone>+353 20 917 9714</Telephone>
+    <Email>DJohnInc@gmail.com</Email>
+  </Ticket_Supplier>
+  <Ticket_Supplier>
+    <Name>Jane Doe Inc.</Name>
+    <Event>Football Match</Event>
+    <Address>15 Goldbrook Sq, Castleknock, Dublin 15</Address>
+    <Telephone>+353 20 914 2546</Telephone>
+    <Email>DJaneInc@gmail.com</Email>
+  </Ticket_Supplier>
+  <Ticket_Supplier>
+    <Name>Janet Doe Inc.</Name>
+    <Event>Festival</Event>
+    <Address>15 Goldbrook Sq, Castleknock, Dublin 15</Address>
+    <Telephone>+353 20 913 4417</Telephone>
+    <Email>DJanetInc@gmail.com</Email>
+  </Ticket_Supplier>
+</Ticket_Supplier_Info>

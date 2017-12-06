@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Customer_Info [ <!ELEMENT Customer_Info (Customer)*>
+<!ELEMENT Customer (Name, Age, Telephone, Email, BillingAddress)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT BillingAddress (#PCDATA)>
+<!ELEMENT Telephone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ATTLIST Customer AccountID CDATA #REQUIRED>
+]>
+
+<Customer_Info>
+  <Customer AccountID = "0000">
+    <Name>John Doe</Name>
+    <Age>25</Age>
+    <Telephone>+353 20 917 9714</Telephone>
+    <Email>DJohn@gmail.com</Email>
+    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
+  </Customer>
+  <Customer AccountID = "0001">
+    <Name>Jane Doe</Name>
+    <Age>26</Age>
+    <Telephone>+353 20 914 2546</Telephone>
+    <Email>DJane@gmail.com</Email>
+    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
+  </Customer>
+  <Customer AccountID = "0002">
+    <Name>Janet Doe</Name>
+    <Age>27</Age>
+    <Telephone>+353 20 913 4417</Telephone>
+    <Email>DJanet@gmail.com</Email>
+    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
+  </Customer>
+</Customer_Info>
