@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Ticket_List[
+<!ELEMENT Ticket_List (Ticket+)>
+<!ELEMENT Ticket (Ticket.Event,Ticket.Category,Ticket.seatType,Ticket.Price,Ticket.Time,Ticket.Location,Ticket.EventPartner)><!ATTLIST Ticket Code CDATA #REQUIRED>
+<!ELEMENT Ticket.Event (#PCDATA)>
+<!ELEMENT Ticket.Category (#PCDATA)>
+<!ELEMENT Tickes.seatType (#PCDATA)> <!--PitchSeating, SnakePit, CusackStand-Lower/UpperTier, HoganStand-Lower/UpperTier, DavidStand-Lower/UpperTier, PitchStanding-->
+<!ELEMENT Ticket.Price (#PCDATA)>
+<!ELEMENT Ticket.Time (date,dayOfTheWeek,startTime)>
+<!ELEMENT date (dd,mm,yyyy)>
+<!ELEMENT dd (#PCDATA)>
+<!ELEMENT mm (#PCDATA)>
+<!ELEMENT yyyy (#PCDATA)>
+<!ELEMENT dayOfTheWeek (#PCDATA)>
+<!ELEMENT startTime (#PCDATA)>
+<!ELEMENT Ticket.Location (#PCDATA)>
+<!ELEMENT Ticket.EventPartner (#PCDATA)> ]>
+
+<Ticket_List>
+	<Ticket Code="MUK180004">
+		<Ticket.Event>Taylor Swift Concert</Ticket.Event>
+		<Ticket.Category>Music</Ticket.Category>
+		<Ticket.seatType>Pitch Seating</Ticket.seatType>
+		<Ticket.Price>€144.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>18:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Croke Park, James Avenue, Dublin 3</Ticket.Location>
+		<Ticket.EventPartner>Big Machine Records</Ticket.EventPartner>
+	</Ticket>
+
+<!--TODO-->
+	<Ticket Code="MUK181056">
+		<Ticket.Event>Taylor Swift Concert</Ticket.Event>
+		<Ticket.Category>Music</Ticket.Category>
+		<Ticket.seatType>Snake Pit</Ticket.seatType>
+		<Ticket.Price>€144.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>18:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Croke Park, James Avenue, Dublin 3</Ticket.Location>
+		<Ticket.EventPartner>Big Machine Records</Ticket.EventPartner>
+	</Ticket>
+
+	<Ticket Code="MUK185124">
+		<Ticket.Event>Taylor Swift Concert</Ticket.Event>
+		<Ticket.Category>Music</Ticket.Category>
+		<Ticket.seatType>Cusack Stand Premium</Ticket.seatType>
+		<Ticket.Price>€104.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>18:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Croke Park, James Avenue, Dublin 3</Ticket.Location>
+		<Ticket.EventPartner>Big Machine Records</Ticket.EventPartner>
+	</Ticket>
+
+	<Ticket Code="MUK180067">
+		<Ticket.Event>Taylor Swift Concert</Ticket.Event>
+		<Ticket.Category>Music</Ticket.Category>
+		<Ticket.seatType>Pitch Seating</Ticket.seatType>
+		<Ticket.Price>€144.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>18:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Croke Park, James Avenue, Dublin 3</Ticket.Location>
+		<Ticket.EventPartner>Big Machine Records</Ticket.EventPartner>
+	</Ticket>
+
+	<Ticket Code="ADB180004">
+		<Ticket.Event>Kevin Hart Talk Show</Ticket.Event>
+		<Ticket.Category>Arts, Theatre and Comedy</Ticket.Category>
+		<Ticket.seatType>Flat Seating</Ticket.seatType>
+		<Ticket.Price>€41.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>2</dd>
+				<mm>November</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>20:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>3Arena, N Wall Quay, North Dock, Dublin 1</Ticket.Location>
+		<Ticket.EventPartner>Hart Beat Productions</Ticket.EventPartner>
+	</Ticket>
+
+	<Ticket Code="ADB173074">
+		<Ticket.Event>Kevin Hart Talk Show</Ticket.Event>
+		<Ticket.Category>Arts, Theatre and Comedy</Ticket.Category>
+		<Ticket.seatType>Cusack Stand Lower</Ticket.seatType>
+		<Ticket.Price>€114.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>14</dd>
+				<mm>December</mm>
+				<yyyy>2017</yyyy>
+			</date>
+			<dayOfTheWeek>Thursday</dayOfTheWeek>
+			<startTime>19:00</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Croke Park, James Avenue, Dublin 3</Ticket.Location>
+		<Ticket.EventPartner>Hart Beat Productions</Ticket.EventPartner>
+	</Ticket>
+
+	<Ticket Code="SBF172054">
+		<Ticket.Event>European Rugby Champions Cup - Ulster Rugby vs Harlequins</Ticket.Event>
+		<Ticket.Category>Sports</Ticket.Category>
+		<Ticket.seatType>Grand Stand</Ticket.seatType>
+		<Ticket.Price>€43.00</Ticket.Price>
+		<Ticket.Time>
+			<date>
+				<dd>15</dd>
+				<mm>December</mm>
+				<yyyy>2017</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>19:45</startTime>
+		</Ticket.Time>
+		<Ticket.Location>Kingspan Stadium, Belfast</Ticket.Location>
+		<Ticket.EventPartner>Rugby Union</Ticket.EventPartner>
+	</Ticket>
+</Ticket_List>

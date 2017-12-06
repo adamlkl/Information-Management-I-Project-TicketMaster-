@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE payment_list[
+<!ELEMENT payment_list (payment+)>
+<!ELEMENT payment ( debit | credit )>
+<!ELEMENT debit (debit.card_number, debit.card_holder_name, debit.expiry_date, debit.security_code, debit.bank, debit.payment_amount)>
+<!ELEMENT credit (credit.card_number, credit.card_holder_name, credit.expiry_date, credit.security_code, credit.authentication_code, credit.bank, credit.payment_amount)>
+<!ELEMENT debit.card_number (#PCDATA)>
+<!ELEMENT debit.card_holder_name (#PCDATA)>
+<!ELEMENT debit.expiry_date (debit.mm,debit.yy)>
+<!ELEMENT debit.mm (#PCDATA)>
+<!ELEMENT debit.yy (#PCDATA)>
+<!ELEMENT debit.security_code (#PCDATA)>
+<!ELEMENT debit.bank (#PCDATA)>
+<!ELEMENT debit.payment_amount (#PCDATA)>
+<!ELEMENT credit.card_number (#PCDATA)>
+<!ELEMENT credit.card_holder_name (#PCDATA)>
+<!ELEMENT credit.expiry_date (credit.mm,credit.yy)>
+<!ELEMENT credit.mm (#PCDATA)>
+<!ELEMENT credit.yy (#PCDATA)>
+<!ELEMENT credit.security_code (#PCDATA)>
+<!ELEMENT credit.authentication_code (#PCDATA)>
+<!ELEMENT credit.bank (#PCDATA)>
+<!ELEMENT credit.payment_amount (#PCDATA)>]>
+
+<payment_list>
+	<payment>
+			<debit>
+				<debit.card_number>1234 5666 7897 5647</debit.card_number>
+				<debit.card_holder_name>JOAN SMALLS</debit.card_holder_name>
+				<debit.expiry_date>
+					<debit.mm>07</debit.mm>
+					<debit.yy>18</debit.yy>
+				</debit.expiry_date>
+				<debit.security_code>657</debit.security_code>
+				<debit.bank>Bank of America</debit.bank>
+				<debit.payment_amount>€144.00</debit.payment_amount>
+			</debit>
+	</payment>
+<!--TODO-->
+	<payment>
+			<debit>
+				<debit.card_number>1234 5789 1011 1213</debit.card_number>
+				<debit.card_holder_name>BILL GATES</debit.card_holder_name>
+				<debit.expiry_date>
+					<debit.mm>05</debit.mm>
+					<debit.yy>23</debit.yy>
+				</debit.expiry_date>
+				<debit.security_code>234</debit.security_code>
+				<debit.bank>Bank of America</debit.bank>
+				<debit.payment_amount>€114.00</debit.payment_amount>
+			</debit>
+	</payment>
+	
+	<payment>
+			<debit>
+				<debit.card_number>1989 0823 2380 9891</debit.card_number>
+				<debit.card_holder_name>WEN XIA YU</debit.card_holder_name>
+				<debit.expiry_date>
+					<debit.mm>08</debit.mm>
+					<debit.yy>23</debit.yy>
+				</debit.expiry_date>
+				<debit.security_code>989</debit.security_code>
+				<debit.bank>Bank of China</debit.bank>
+				<debit.payment_amount>€288.00</debit.payment_amount>
+			</debit>
+	</payment>
+	
+	<payment>
+			<credit>
+				<credit.card_number>1955 1028 6290 1994</credit.card_number>
+				<credit.card_holder_name>BILL GATES</credit.card_holder_name>
+				<credit.expiry_date>
+					<credit.mm>10</credit.mm>
+					<credit.yy>20</credit.yy>
+				</credit.expiry_date>
+				<credit.security_code>901</credit.security_code>
+				<credit.authentication_code>603498</credit.authentication_code>
+				<credit.bank>Bank of America</credit.bank>
+				<credit.payment_amount>€104.00</credit.payment_amount>
+			</credit>
+	</payment>
+	
+	<payment>
+			<credit>
+				<credit.card_number>1971 1029 4642 2017</credit.card_number>
+				<credit.card_holder_name>MA HUA TENG</credit.card_holder_name>
+				<credit.expiry_date>
+					<credit.mm>10</credit.mm>
+					<credit.yy>20</credit.yy>
+				</credit.expiry_date>
+				<credit.security_code>420</credit.security_code>
+				<credit.authentication_code>987654</credit.authentication_code>
+				<credit.bank>Bank of China</credit.bank>
+				<credit.payment_amount>€114.00</credit.payment_amount>
+			</credit>
+	</payment>
+	
+</payment_list>
