@@ -60,12 +60,12 @@
   
   <bank>
     <name>Bank of China</name>
-    <address>Shang Hai China</address>
+    <address>200 MID.YINCHENG RD., PUDONG NEW DISTRICT, SHANGHAI 200121,CHINA</address>
     <branch>Shang Hai</branch>
     <sortCode>BOC91074019</sortCode>
     <contactDetails>
       <email>BOCShangHai@email.com</email>
-      <phoneNumber>+12918273645</phoneNumber>
+      <phoneNumber>(86)021-38824588</phoneNumber>
     </contactDetails>
   </bank>
   
