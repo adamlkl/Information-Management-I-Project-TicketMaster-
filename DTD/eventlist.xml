@@ -36,7 +36,7 @@
       <location>Dublin, Ireland</location>
     </venue>
     <organiser>MusicOrg Ltd.</organiser>
-    <ticket amount_available = "440">
+    <ticket amountAvailable = "440">
       <category>Music</category>
       <price>130.00</price>
     </ticket>
@@ -50,7 +50,7 @@
     </date>
     <act>Rihanna</act> 
     <venue>
-      <venueName>London Stadium</venueName>
+      <name>London Stadium</name>
       <location>Stratford, London, UK</location>
     </venue>
     <organiser>AnotherMusicOrg Inc.</organiser>
