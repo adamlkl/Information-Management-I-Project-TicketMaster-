@@ -47,4 +47,26 @@
     </contactDetails>
   </bank>
   
+  <bank>
+    <name>Bank of America</name>
+    <address>New York, U.S.A.</address>
+    <branch>New York</branch>
+    <sortCode>BOA12319</sortCode>
+    <contactDetails>
+      <email>BOANewYork@email.com</email>
+      <phoneNumber>+12918273645</phoneNumber>
+    </contactDetails>
+  </bank>
+  
+  <bank>
+    <name>Bank of China</name>
+    <address>Shang Hai China</address>
+    <branch>Shang Hai</branch>
+    <sortCode>BOC91074019</sortCode>
+    <contactDetails>
+      <email>BOCShangHai@email.com</email>
+      <phoneNumber>+12918273645</phoneNumber>
+    </contactDetails>
+  </bank>
+  
 </banks>
