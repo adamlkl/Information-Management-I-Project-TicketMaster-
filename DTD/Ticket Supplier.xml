@@ -9,22 +9,22 @@
 <!ELEMENT email (#PCDATA)>
 ]>
 
-<Ticket_Supplier_Info>
-  <Ticket_Supplier>
+<ticketSupplierInfo>
+  <ticketSupplier>
     <name>John Doe Inc.</name>
     <event>Concert</event>
     <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
     <telephone>+353 20 917 9714</telephone>
     <email>DJohnInc@gmail.com</email>
-  </Ticket_Supplier>
-  <Ticket_Supplier>
+  </ticketSupplier>
+  <ticketSupplier>
     <name>Jane Doe Inc.</name>
     <event>Football Match</event>
     <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
     <telephone>+353 20 914 2546</telephone>
     <email>DJaneInc@gmail.com</email>
-  </Ticket_Supplier>
-  <Ticket_Supplier>
+  </ticketSupplier>
+  <ticketSupplier>
     <name>Janet Doe Inc.</name>
     <event>Festival</event>
     <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
