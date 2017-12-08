@@ -7,18 +7,18 @@
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT address (#PCDATA)>
   <!ELEMENT branch (#PCDATA)>
-  <!ELEMENT sortCode (#PCDATA)>
+
   <!ELEMENT contactDetails (email, phone_number)>
-  
   <!ELEMENT email (#PCDATA)>
   <!ELEMENT phoneNumber (#PCDATA)>
+
+  <!ATTLIST branch sortCode CDATA #REQUIRED>
 ]>
 <banks>
   <bank>
     <name>Bank of Ireland</name>
     <address>Main Street, Swords, Co. Dublin, Ireland</address>
-    <branch>Swords</branch>
-    <sortCode>BOI123456</sortCode>
+    <branch sortCode="BOI345">Swords</branch>
     <contactDetails>
       <email>bankofirelandswords@email.com</email>
       <phoneNumber>+353123456789</phoneNumber>
@@ -28,8 +28,7 @@
   <bank>
     <name>Ulster Bank</name>
     <address>Dublin, Ireland</address>
-    <branch>Dublin</branch>
-    <sortCode>UBN123456</sortCode>
+    <branch sortCode="UBN123">Dublin</branch>
     <contactDetails>
       <email>ulsterbankdublin@email.com</email>
       <phone_number>+353987654321</phoneNumber>
@@ -39,8 +38,7 @@
   <bank>
     <name>Permanent TSB</name>
     <address>Cork, Ireland</address>
-    <branch>Cork</branch>
-    <sortCode>TSB123456</sortCode>
+    <branch sortCode="TSB321">Cork</branch>
     <contactDetails>
       <email>permanenttsbcork@email.com</email>
       <phoneNumber>+353918273645</phoneNumber>
@@ -50,8 +48,7 @@
   <bank>
     <name>Bank of America</name>
     <address>New York, U.S.A.</address>
-    <branch>New York</branch>
-    <sortCode>BOA12319</sortCode>
+    <branch sortCode="BOA456">New York</branch>
     <contactDetails>
       <email>BOANewYork@email.com</email>
       <phoneNumber>+12918273645</phoneNumber>
@@ -61,8 +58,7 @@
   <bank>
     <name>Bank of China</name>
     <address>200 MID.YINCHENG RD., PUDONG NEW DISTRICT, SHANGHAI 200121,CHINA</address>
-    <branch>Shang Hai</branch>
-    <sortCode>BOC91074019</sortCode>
+    <branch sortCode="BOC910">Shang Hai</branch>
     <contactDetails>
       <email>BOCShangHai@email.com</email>
       <phoneNumber>(86)021-38824588</phoneNumber>
