@@ -36,7 +36,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>18:00</startTime>
 		</time>
-		<location>Croke Park, James Avenue, Dublin 3</location>
+		<location>Croke Park, James Avenue, Dublin 3, Ireland</location>
 		<eventPartner>Big Machine Records</eventPartner>
 	</ticket>
 
@@ -58,7 +58,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>18:00</startTime>
 		</time>
-		<location>Croke Park, James Avenue, Dublin 3</location>
+		<location>Croke Park, James Avenue, Dublin 3, Ireland</location>
 		<eventPartner>Big Machine Records</eventPartner>
 	</ticket>
 
@@ -79,7 +79,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>18:00</startTime>
 		</time>
-		<location>Croke Park, James Avenue, Dublin 3</location>
+		<location>Croke Park, James Avenue, Dublin 3, Ireland</location>
 		<eventPartner>Big Machine Records</eventPartner>
 	</ticket>
 		
@@ -100,7 +100,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>18:00</startTime>
 		</time>
-		<location>Croke Park, James Avenue, Dublin 3</location>
+		<location>Croke Park, James Avenue, Dublin 3, Ireland</location>
 		<eventPartner>Big Machine Records</eventPartner>
 	</ticket>
 	
@@ -121,7 +121,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>20:00</startTime>
 		</time>
-		<location>3Arena, N Wall Quay, North Dock, Dublin 1</location>
+		<location>3Arena, N Wall Quay, North Dock, Dublin 1, Ireland</location>
 		<eventPartner>Hart Beat Productions</eventPartner>
 	</ticket>
 	
@@ -142,7 +142,7 @@
 			<dayOfTheWeek>Thursday</dayOfTheWeek>
 			<startTime>19:00</startTime>
 		</time>
-		<location>Croke Park, James Avenue, Dublin 3</location>
+		<location>Croke Park, James Avenue, Dublin 3, Ireland</location>
 		<eventPartner>Hart Beat Productions</eventPartner>
 	</ticket>
 	
@@ -163,7 +163,7 @@
 			<dayOfTheWeek>Friday</dayOfTheWeek>
 			<startTime>19:45</startTime>
 		</time>
-		<location>Kingspan Stadium, Belfast</location>
+		<location>Kingspan Stadium, Belfast, Northern Ireland, UK</location>
 		<eventPartner>Rugby Union</eventPartner>
 	</ticket>
 
