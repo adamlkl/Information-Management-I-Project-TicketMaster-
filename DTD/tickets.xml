@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE Ticket_List[
 <!ELEMENT Ticket_List (ticket+)>
-<!ELEMENT ticket (event, category, seat, price, time, location, eventPartner)><!ATTLIST Ticket code CDATA #REQUIRED>
+<!ELEMENT ticket (event, category, seat, price, time, location, eventPartner)><!ATTLIST ticket code CDATA #REQUIRED>
 <!ELEMENT event (#PCDATA)>
 <!ELEMENT category (#PCDATA)>
 <!ELEMENT seat (type, number)>
