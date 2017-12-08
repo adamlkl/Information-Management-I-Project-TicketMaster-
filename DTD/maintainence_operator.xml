@@ -1,104 +1,104 @@
 <?xml version="1.0" ?>
-<!DOCTYPE Maintenence_Operators[
-<!ELEMENT Maintenence_Operators (Maintenence_Operator+)>
-<!ELEMENT Maintenence_Operator (Maintenence_Operator.name,Maintenence_Operator.site_responsible,Maintenence_Operator.schedule,Maintenence_Operator.salary,Maintenence_Operator.performance)><!ATTLIST Maintenence_Operator ID CDATA #REQUIRED>
+<!DOCTYPE maintenenceOperators[
+<!ELEMENT maintenenceOperators (maintenenceOperator+)>
+<!ELEMENT maintenenceOperator (name,siteResponsible,schedule,salary,performance)><!ATTLIST maintenenceOperator id CDATA #REQUIRED>
 <!ELEMENT firstName (#PCDATA)>
-<!ELEMENT lastname (#PCDATA)>
-<!ELEMENT Maintenence_Operator.name (firstName,lastname)>
-<!ELEMENT Maintenence_Operator.site_responsible (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT name (firstName+, lastName)>
+<!ELEMENT siteResponsible (#PCDATA)>
 <!ELEMENT workingDays (#PCDATA)>
 <!ELEMENT workingHours (#PCDATA)>
-<!ELEMENT Maintenence_Operator.schedule (workingDays+, workingHours)>
-<!ELEMENT Maintenence_Operator.salary (#PCDATA)>
-<!ELEMENT Maintenence_Operator.performance (#PCDATA)>]>
+<!ELEMENT schedule (workingDays+, workingHours)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT performance (#PCDATA)>]>
 
-<Maintenence_Operators>
+<maintenenceOperators>
 
-	<Maintenence_Operator id="34949">
-		<Maintenence_Operator.name>
+	<maintenenceOperator id="34949">
+		<name>
 			<firstName>Hugh</firstName> 
 			<lastName>Jackman</lastName>
-		</Maintenence_Operator.name>
-		<Maintenence_Operator.site_responsible>Ticket Updates</Maintenence_Operator.site_responsible>
-		<Maintenence_Operator.schedule>
+		</name>
+		<siteResponsible>Ticket Updates</siteResponsible>
+		<schedule>
 			<workingDays>Monday</workingDays>
 			<workingDays>Tuesday</workingDays>
 			<workingDays>Wednesday</workingDays>
 			<workingDays>Thursday</workingDays>
 			<workingHours>09:00-17:00</workingHours>
-		</Maintenence_Operator.schedule>
-		<Maintenence_Operator.salary>€4000</Maintenence_Operator.salary>
-		<Maintenence_Operator.performance>A</Maintenence_Operator.performance>
-	</Maintenence_Operator>
+		</schedule>
+		<salary>€4000</salary>
+		<performance>A</performance>
+	</maintenenceOperator>
 	
-	<Maintenence_Operator id="35123">
-		<Maintenence_Operator.name>
+	<maintenenceOperator id="35123">
+		<name>
 			<firstName>Chuck</firstName> 
 			<lastName>Noris</lastName>
-		</Maintenence_Operator.name>
-		<Maintenence_Operator.site_responsible>Ticket Sales</Maintenence_Operator.site_responsible>
-		<Maintenence_Operator.schedule>
+		</name>
+		<siteResponsible>Ticket Sales</siteResponsible>
+		<schedule>
 			<workingDays>Tuesday</workingDays>
 			<workingDays>Wednesday</workingDays>
 			<workingDays>Thursday</workingDays>
 			<workingDays>Friday</workingDays>
 			<workingHours>10:00-18:00</workingHours>
-		</Maintenence_Operator.schedule>
-		<Maintenence_Operator.salary>€3000</Maintenence_Operator.salary>
-		<Maintenence_Operator.performance>B+</Maintenence_Operator.performance>
-	</Maintenence_Operator>
+		</schedule>
+		<salary>€3000</salary>
+		<performance>B+</performance>
+	</maintenenceOperator>
 	
-	<Maintenence_Operator id="36678">
-		<Maintenence_Operator.name>
+	<maintenenceOperator id="36678">
+		<name>
 			<firstName>Russell</firstName> 
 			<lastName>Crowe</lastName>
-		</Maintenence_Operator.name>
-		<Maintenence_Operator.site_responsible>Ticket Display</Maintenence_Operator.site_responsible>
-		<Maintenence_Operator.schedule>
+		</name>
+		<siteResponsible>Ticket Display</siteResponsible>
+		<schedule>
 			<workingDays>Monday</workingDays>
 			<workingDays>Tuesday</workingDays>
 			<workingDays>Wednesday</workingDays>
 			<workingDays>Thursday</workingDays>
 			<workingDays>Friday</workingDays>
 			<workingHours>10:00-18:00</workingHours>
-		</Maintenence_Operator.schedule>
-		<Maintenence_Operator.salary>€5000</Maintenence_Operator.salary>
-		<Maintenence_Operator.performance>A+</Maintenence_Operator.performance>
-	</Maintenence_Operator>
+		</schedule>
+		<salary>€5000</salary>
+		<performance>A+</performance>
+	</maintenenceOperator>
 	
-	<Maintenence_Operator id="34248">
-		<Maintenence_Operator.name>
+	<maintenenceOperator id="34248">
+		<name>
 			<firstName>Julia</firstName> 
 			<lastName>Roberts</lastName>
-		</Maintenence_Operator.name>
-		<Maintenence_Operator.site_responsible>Ticket Sales</Maintenence_Operator.site_responsible>
-		<Maintenence_Operator.schedule>
+		</name>
+		<siteResponsible>Ticket Sales</siteResponsible>
+		<schedule>
 			<workingDays>Monday</workingDays>
 			<workingDays>Wednesday</workingDays>
 			<workingDays>Friday</workingDays>
 			<workingDays>Sunday</workingDays>
 			<workingHours>18:00-06:00</workingHours>
-		</Maintenence_Operator.schedule>
-		<Maintenence_Operator.salary>€4500</Maintenence_Operator.salary>
-		<Maintenence_Operator.performance>A+</Maintenence_Operator.performance>
-	</Maintenence_Operator>
+		</schedule>
+		<salary>€4500</salary>
+		<performance>A+</performance>
+	</maintenenceOperator>
 	
-	<Maintenence_Operator id="34949">
-		<Maintenence_Operator.name>
+	<maintenenceOperator id="34949">
+		<name>
 			<firstName>Sui</firstName> 
 			<lastName>He</lastName>
-		</Maintenence_Operator.name>
-		<Maintenence_Operator.site_responsible>Ticket Sales</Maintenence_Operator.site_responsible>
-		<Maintenence_Operator.schedule>
+		</name>
+		<siteResponsible>Ticket Sales</siteResponsible>
+		<schedule>
 			<workingDays>Saturday</workingDays>
 			<workingDays>Sunday</workingDays>
 			<workingHours>09:00-17:00</workingHours>
-		</Maintenence_Operator.schedule>
-		<Maintenence_Operator.salary>€2700</Maintenence_Operator.salary>
-		<Maintenence_Operator.performance>B+</Maintenence_Operator.performance>
-	</Maintenence_Operator>
+		</schedule>
+		<salary>€2700</salary>
+		<performance>B+</performance>
+	</maintenenceOperator>
 	
-</Maintenence_Operators>
+</maintenenceOperators>
 
 	
 
