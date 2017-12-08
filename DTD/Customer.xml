@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE Customer_Info [ <!ELEMENT Customer_Info (Customer)*>
-<!ELEMENT Customer (Name, Age, Telephone, Email, BillingAddress)>
-<!ELEMENT Name (#PCDATA)>
-<!ELEMENT Age (#PCDATA)>
-<!ELEMENT BillingAddress (#PCDATA)>
-<!ELEMENT Telephone (#PCDATA)>
-<!ELEMENT Email (#PCDATA)>
-<!ATTLIST Customer AccountID CDATA #REQUIRED>
+<!DOCTYPE customerInfo [ <!ELEMENT customerInfo (customer)*>
+<!ELEMENT customer (name, age, telephone, email, billingAddress)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST customer accountID CDATA #REQUIRED>
 ]>
 
-<Customer_Info>
-  <Customer AccountID = "0000">
-    <Name>John Doe</Name>
-    <Age>25</Age>
-    <Telephone>+353 20 917 9714</Telephone>
-    <Email>DJohn@gmail.com</Email>
-    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
-  </Customer>
-  <Customer AccountID = "0001">
-    <Name>Jane Doe</Name>
-    <Age>26</Age>
-    <Telephone>+353 20 914 2546</Telephone>
-    <Email>DJane@gmail.com</Email>
-    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
-  </Customer>
-  <Customer AccountID = "0002">
-    <Name>Janet Doe</Name>
-    <Age>27</Age>
-    <Telephone>+353 20 913 4417</Telephone>
-    <Email>DJanet@gmail.com</Email>
-    <BillingAddress>15 Goldbrook Sq, Castleknock, Dublin 15</BillingAddress>
-  </Customer>
-</Customer_Info>
+<customerInfo>
+  <customer accountID = "0000">
+    <name>John Doe</name>
+    <age>25</age>
+    <telephone>+353 20 917 9714</telephone>
+    <email>DJohn@gmail.com</email>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+  </customer>
+  <customer accountID = "0001">
+    <name>Jane Doe</name>
+    <age>26</age>
+    <telephone>+353 20 914 2546</telephone>
+    <email>DJane@gmail.com</email>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+  </customer>
+  <customer accountID = "0002">
+    <name>Janet Doe</name>
+    <age>27</age>
+    <telephone>+353 20 913 4417</telephone>
+    <email>DJanet@gmail.com</email>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+  </customer>
+</customerInfo>
