@@ -2,45 +2,45 @@
 <!DOCTYPE banks
 [
   <!ELEMENT banks (bank*)>
-  <!ELEMENT bank (name, address, sort_code, contact_details)>
+  <!ELEMENT bank (name, address, sortCode, contactDetails)>
   
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT address (#PCDATA)>
-  <!ELEMENT sort_code (#PCDATA)>
-  <!ELEMENT contact_details (email, phone_number)>
+  <!ELEMENT sortCode (#PCDATA)>
+  <!ELEMENT contactDetails (email, phone_number)>
   
   <!ELEMENT email (#PCDATA)>
-  <!ELEMENT phone_number (#PCDATA)>
+  <!ELEMENT phoneNumber (#PCDATA)>
 ]>
 <banks>
   <bank>
     <name>Bank of Ireland</name>
     <address>Main Street, Swords, Co. Dublin, Ireland</address>
-    <sort_code>BOI123456</sort_code>
-    <contact_details>
+    <sortCode>BOI123456</sortCode>
+    <contactDetails>
       <email>bankofirelandswords@email.com</email>
-      <phone_number>+353123456789</phone_number>
-    </contact_details>
+      <phoneNumber>+353123456789</phoneNumber>
+    </contactDetails>
   </bank>
 
   <bank>
     <name>Ulster Bank</name>
     <address>Dublin, Ireland</address>
-    <sort_code>UBN123456</sort_code>
+    <sortCode>UBN123456</sortCode>
     <contact_details>
       <email>ulsterbankdublin@email.com</email>
-      <phone_number>+353987654321</phone_number>
-    </contact_details>
+      <phone_number>+353987654321</phoneNumber>
+    </contactDetails>
   </bank>
   
   <bank>
     <name>Permanent TSB</name>
     <address>Cork, Ireland</address>
-    <sort_code>TSB123456</sort_code>
+    <sortCode>TSB123456</sortCode>
     <contact_details>
       <email>permanenttsbcork@email.com</email>
-      <phone_number>+353918273645</phone_number>
-    </contact_details>
+      <phoneNumber>+353918273645</phoneNumber>
+    </contactDetails>
   </bank>
   
 </banks>
