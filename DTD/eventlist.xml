@@ -6,8 +6,8 @@
   <!ELEMENT event (name, date, act, venue, organiser, ticket)>
   
   <!ELEMENT name (#PCDATA)>
-  <!ELEMENT date (day, month, year, time)>
-  <!ELEMENT act (#PCDATA)>
+  <!ELEMENT date+ (day, month, year, time)>
+  <!ELEMENT act* (#PCDATA)>
   <!ELEMENT venue (name, location)>
   <!ELEMENT eventPartner (#PCDATA)>
   <!ELEMENT ticket (category, price)>
@@ -24,13 +24,18 @@
 
   <!ELEMENT price (#PCDATA)>
   <!ATTLIST type amountAvailable CDATA #REQUIRED>
+  <!ATTLIST event id CDATA #REQUIRED>
 ]>
 
 <eventlist>
-  <event>
+  <event id="MTS7575">
     <name>Taylor Swift Concert</name>
     <date>
       <day>20</day> <month>January</month> <year>2018</year>
+      <time>17:00</time>
+    </date>
+    <date>
+      <day>22</day> <month>January</month> <year>2018</year>
       <time>17:00</time>
     </date>
     <act>Taylor Swift</act> 
@@ -47,7 +52,7 @@
     </ticket>
   </event>
 
-  <event>
+  <event id="CKH3434">
     <name>Kevin Hart Talkshow</name>
     <date>
       <day>02</day> <month>November</month> <year>2018</year>
@@ -66,7 +71,7 @@
     </ticket>
   </event>
   
-  <event>
+  <event id="CKH1024">
     <name>Kevin Hart Talkshow</name>
     <date>
       <day>14</day> <month>November</month> <year>2017</year>
@@ -85,13 +90,12 @@
     </ticket>
   </event>
   
-  <event>
+  <event id="SRC>
     <name>European Rugby Champions Cup - Ulster Rugby vs Harlequins</name>
     <date>
       <day>15</day> <month>December</month> <year>2017</year>
       <time>19:45</time>
     </date>
-    <act>Royal Shakespeare Company</act> 
     <venue>
       <name>Kingspan Stadium</name>
       <location>Belfast, Northern Ireland, UK</location>
