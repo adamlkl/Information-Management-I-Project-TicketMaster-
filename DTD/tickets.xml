@@ -4,9 +4,7 @@
 <!ELEMENT ticket (event, category, seat, price, time, location, eventPartner)><!ATTLIST ticket code CDATA #REQUIRED>
 <!ELEMENT event (#PCDATA)>
 <!ELEMENT category (#PCDATA)>
-<!ELEMENT seat (type, number)>
-<!ELEMENT type (#PCDATA)> <!--PitchSeating, SnakePit, CusackStand-Lower/UpperTier, HoganStand-Lower/UpperTier, DavidStand-Lower/UpperTier, PitchStanding-->
-<!ELEMENT number (#PCDATA)> 
+<!ELEMENT seat (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
 <!ELEMENT time (date, dayOfTheWeek, startTime)>
 <!ELEMENT date (dd,mm,yyyy)>
@@ -18,14 +16,13 @@
 <!ELEMENT location (#PCDATA)>
 <!ELEMENT eventPartner (#PCDATA)> ]>
 
+<!ATTLIST seat type CDATA #IMPLIED> <!--PitchSeating, SnakePit, CusackStand-Lower/UpperTier, HoganStand-Lower/UpperTier, DavidStand-Lower/UpperTier, PitchStanding--> 
+
 <Ticket_List>
 	<ticket code="MUK180004">
 		<event>Taylor Swift Concert</event>
 		<category>Music</category>
-		<seat>
-			<type>Pitch Seating</type>
-			<number>PS4</number>
-		</seat>
+		<seat type="Pitch Seating">44</seat>
 		<price>€144.00</price>
 		<time>
 			<date>
@@ -40,14 +37,10 @@
 		<eventPartner>Big Machine Records</eventPartner>
 	</ticket>
 
-<!--TODO-->
 	<ticket code="MUK181056">
 		<event>Taylor Swift Concert</event>
 		<category>Music</category>
-		<seat>
-			<type>Snake Pit</type>
-			<number>SP56</number>
-		</seat>
+		<seat type="Snake Pit">56</seat>
 		<price>€144.00</price>
 		<time>
 			<date>
@@ -65,10 +58,7 @@
 	<ticket code="MUK185124">
 		<event>Taylor Swift Concert</event>
 		<category>Music</category>
-		<seat>
-			<type>Cusack Stand Premium</type>
-			<number>CSP124</number>
-		</seat>
+		<seat type="Cusack Stand Premium">124</seat>
 		<price>€104.00</price>
 		<time>
 			<date>
@@ -86,10 +76,7 @@
 	<ticket code="MUK180067">
 		<event>Taylor Swift Concert</event>
 		<category>Music</category>
-		<seat>
-			<type>Pitch Seating</type>
-			<number>PS67</number>
-		</seat>
+		<seat type="Pitch Seating">67</seat>
 		<price>€144.00</price>
 		<time>
 			<date>
@@ -107,10 +94,7 @@
 	<ticket code="ADB180004">
 		<event>Kevin Hart Talk Show</event>
 		<category>Arts, Theatre and Comedy</category>
-		<seat>
-			<type>Flat Seating</type>
-			<number>FS4</number>
-		</seat>
+		<seat type="Flat Seating">24</seat>
 		<price>€41.00</price>
 		<time>
 			<date>
@@ -128,10 +112,7 @@
 	<ticket code="ADB173074">
 		<event>Kevin Hart Talk Show</event>
 		<category>Arts, Theatre and Comedy</category>
-		<seat>
-			<type>Cusack Stand Lower</type>
-			<number>CSL74</number>
-		</seat>
+		<seat type="Cusack Stand Lower">74</seat>
 		<price>€114.00</price>
 		<time>
 			<date>
@@ -149,10 +130,7 @@
 	<ticket code="SBF172054">
 		<event>European Rugby Champions Cup - Ulster Rugby vs Harlequins</event>
 		<category>Sports</category>
-		<seat>
-			<type>Grand Stand</type>
-			<number>GS54</number>
-		</seat>
+		<seat type="Grand Stand">54</seat>
 		<price>€43.00</price>
 		<time>
 			<date>
