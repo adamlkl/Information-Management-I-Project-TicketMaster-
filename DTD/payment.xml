@@ -6,7 +6,7 @@
 <!ELEMENT credit (cardNumber, cardHolderName, expiryDate, securityCode, authenticationCode, bank, paymentAmount)>
 <!ELEMENT cardNumber (#PCDATA)>
 <!ELEMENT cardHolderName (#PCDATA)>
-<!ELEMENT expiryDate (debit.mm,debit.yy)>
+<!ELEMENT expiryDate (mm,yy)>
 <!ELEMENT mm (#PCDATA)>
 <!ELEMENT yy (#PCDATA)>
 <!ELEMENT securityCode (#PCDATA)>
