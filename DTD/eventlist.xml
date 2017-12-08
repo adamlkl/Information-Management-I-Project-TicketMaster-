@@ -66,7 +66,26 @@
     </ticket>
   </event>
   
-    <event>
+  <event>
+    <name>Kevin Hart Talkshow</name>
+    <date>
+      <day>14</day> <month>November</month> <year>2017</year>
+      <time>19:00</time>
+    </date>
+    <act>Kevin Hart</act> 
+    <venue>
+      <name>Croke Park</name>
+      <location>James Avenue, Dublin 3, Ireland</location>
+    </venue>
+    <eventPartner>Hart Beat Productions</eventPartner>
+    <ticket amountAvailable = "1200">
+      <category>Arts, Theatre and Comedy</category>
+      <type price="€41.00">Flat Seating</price>
+      <type price="€114.00">Cusack Stand Lower</price>
+    </ticket>
+  </event>
+  
+  <event>
     <name>European Rugby Champions Cup - Ulster Rugby vs Harlequins</name>
     <date>
       <day>15</day> <month>December</month> <year>2017</year>
