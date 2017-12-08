@@ -20,10 +20,10 @@
   <!ELEMENT location (#PCDATA)>
   
   <!ELEMENT category (#PCDATA)>
-  <!ELEMENT type+ (#PCDATA)>
+  <!ELEMENT type+ (name, price)>
 
-  <!ATTLIST type price CDATA #REQUIRED>
-  <!ATTLIST ticket amountAvailable CDATA #REQUIRED>
+  <!ELEMENT price (#PCDATA)>
+  <!ATTLIST type amountAvailable CDATA #REQUIRED>
 ]>
 
 <eventlist>
@@ -39,11 +39,11 @@
       <location>James Avenue, Dublin 3, Ireland</location>
     </venue>
     <eventPartner>Big Machine Records</eventPartner>
-    <ticket amountAvailable = "440">
+    <ticket>
       <category>Music</category>
-      <type price="€144.00">Snake Pit</price>
-      <type price="€144.00">Pitch Seating</price>
-      <type price="€104.00">Cusack Stand Premium</price>
+      <type amountAvailable = "200"> <name>Snake Pit</name> <price>€144.00</price> </type>
+      <type amountAvailable = "150"> <name>Pitch Seating</name> <price>€144.00</price> </type>
+      <type amountAvailable = "500"> <name>Cusack Stand Premium</name> <price>€104.00</price> </type>
     </ticket>
   </event>
 
@@ -59,10 +59,10 @@
       <location>N Wall Quay, North Dock, Dublin 1, Ireland</location>
     </venue>
     <eventPartner>Hart Beat Productions</eventPartner>
-    <ticket amountAvailable = "1200">
+    <ticket>
       <category>Arts, Theatre and Comedy</category>
-      <type price="€41.00">Flat Seating</price>
-      <type price="€114.00">Cusack Stand Lower</price>
+      <type amountAvailable = "500"> <name>Flat Seating</name> <price>€41.00</price> </type>
+      <type amountAvailable = "400"> <name>Cusack Stand Lower</name> <price>€114.00</price> </type>
     </ticket>
   </event>
   
@@ -78,10 +78,10 @@
       <location>James Avenue, Dublin 3, Ireland</location>
     </venue>
     <eventPartner>Hart Beat Productions</eventPartner>
-    <ticket amountAvailable = "1200">
+    <ticket>
       <category>Arts, Theatre and Comedy</category>
-      <type price="€41.00">Flat Seating</price>
-      <type price="€114.00">Cusack Stand Lower</price>
+      <type amountAvailable = "500"> <name>Flat Seating</name> <price>€41.00</price> </type>
+      <type amountAvailable = "400"> <name>Cusack Stand Lower</name> <price>€114.00</price> </type>
     </ticket>
   </event>
   
@@ -97,9 +97,9 @@
       <location>Belfast, Northern Ireland, UK</location>
     </venue>
     <eventPartner>Rugby Union</eventPartner>
-    <ticket amountAvailable = "800">
+    <ticket>
       <category>Sports</category>
-      <type price="€43.00">Grand Stand</price>
+      <type amountAvailable = "500"> <name>Flat Seating</name> <price>€43.00</price> </type>
     </ticket>
   </event>
 
