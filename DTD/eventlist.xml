@@ -8,20 +8,19 @@
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT date (day, time)>
   <!ELEMENT act (#PCDATA)>
-  <!ELEMENT venue (venue_name, location)>
+  <!ELEMENT venue (name, location)>
   <!ELEMENT organiser (#PCDATA)>
   <!ELEMENT ticket (category, price)>
   
   <!ELEMENT day (#PCDATA)>
   <!ELEMENT time (#PCDATA)>
   
-  <!ELEMENT venue_name (#PCDATA)>
   <!ELEMENT location (#PCDATA)>
   
   <!ELEMENT category (#PCDATA)>
   <!ELEMENT price (#PCDATA)>
   
-  <!ATTLIST ticket amount_available CDATA #REQUIRED>
+  <!ATTLIST ticket amountAvailable CDATA #REQUIRED>
 ]>
 
 <eventlist>
@@ -33,7 +32,7 @@
     </date>
     <act>Ed Sheeran</act> 
     <venue>
-      <venue_name>3 Arena</venue_name>
+      <name>3 Arena</name>
       <location>Dublin, Ireland</location>
     </venue>
     <organiser>MusicOrg Ltd.</organiser>
@@ -51,11 +50,11 @@
     </date>
     <act>Rihanna</act> 
     <venue>
-      <venue_name>London Stadium</venue_name>
+      <venueName>London Stadium</venueName>
       <location>Stratford, London, UK</location>
     </venue>
     <organiser>AnotherMusicOrg Inc.</organiser>
-    <ticket amount_available = "1200">
+    <ticket amountAvailable = "1200">
       <category>Music</category>
       <price>150.00</price>
     </ticket>
@@ -69,11 +68,11 @@
     </date>
     <act>Royal Shakespeare Company</act> 
     <venue>
-      <venue_name>Royal Shakespeare Theatre</venue_name>
+      <name>Royal Shakespeare Theatre</name>
       <location>Stratford-upon-Avon, UK</location>
     </venue>
     <organiser>Royal Shakespeare Company</organiser>
-    <ticket amount_available = "800">
+    <ticket amountAvailable = "800">
       <category>Theatre</category>
       <price>60.00</price>
     </ticket>
