@@ -6,75 +6,81 @@
   <!ELEMENT event (name, date, act, venue, organiser, ticket)>
   
   <!ELEMENT name (#PCDATA)>
-  <!ELEMENT date (day, time)>
+  <!ELEMENT date (day, month, year, time)>
   <!ELEMENT act (#PCDATA)>
   <!ELEMENT venue (name, location)>
-  <!ELEMENT organiser (#PCDATA)>
+  <!ELEMENT eventPartner (#PCDATA)>
   <!ELEMENT ticket (category, price)>
   
   <!ELEMENT day (#PCDATA)>
+  <!ELEMENT month (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
   <!ELEMENT time (#PCDATA)>
   
   <!ELEMENT location (#PCDATA)>
   
   <!ELEMENT category (#PCDATA)>
-  <!ELEMENT price (#PCDATA)>
-  
+  <!ELEMENT type+ (#PCDATA)>
+
+  <!ATTLIST type price CDATA #REQUIRED>
   <!ATTLIST ticket amountAvailable CDATA #REQUIRED>
 ]>
 
 <eventlist>
   <event>
-    <name>Ed Sheeran January Tour</name>
+    <name>Taylor Swift Concert</name>
     <date>
-      <day>20 January 2018</day>
+      <day>20</day> <month>January</month> <year>2018</year>
       <time>17:00</time>
     </date>
-    <act>Ed Sheeran</act> 
+    <act>Taylor Swift</act> 
     <venue>
-      <name>3 Arena</name>
-      <location>Dublin, Ireland</location>
+      <name>Croke Park</name>
+      <location>James Avenue, Dublin 3, Ireland</location>
     </venue>
-    <organiser>MusicOrg Ltd.</organiser>
+    <eventPartner>Big Machine Records</eventPartner>
     <ticket amountAvailable = "440">
       <category>Music</category>
-      <price>130.00</price>
+      <type price="€144.00">Snake Pit</price>
+      <type price="€144.00">Pitch Seating</price>
+      <type price="€104.00">Cusack Stand Premium</price>
     </ticket>
   </event>
 
   <event>
-    <name>Rihanna Winter Tour</name>
+    <name>Kevin Hart Talkshow</name>
     <date>
-      <day>15 December 2017</day>
-      <time>21:00</time>
+      <day>02</day> <month>November</month> <year>2018</year>
+      <time>20:00</time>
     </date>
-    <act>Rihanna</act> 
+    <act>Kevin Hart</act> 
     <venue>
-      <name>London Stadium</name>
-      <location>Stratford, London, UK</location>
+      <name>3arena</name>
+      <location>N Wall Quay, North Dock, Dublin 1, Ireland</location>
     </venue>
-    <organiser>AnotherMusicOrg Inc.</organiser>
+    <eventPartner>Hart Beat Productions</eventPartner>
     <ticket amountAvailable = "1200">
-      <category>Music</category>
-      <price>150.00</price>
+      <category>Arts, Theatre and Comedy</category>
+      <type price="€41.00">Flat Seating</price>
+      <type price="€114.00">Cusack Stand Lower</price>
     </ticket>
   </event>
   
     <event>
-    <name>The Merchant of Venice</name>
+    <name>European Rugby Champions Cup - Ulster Rugby vs Harlequins</name>
     <date>
-      <day>21 October 2018</day>
-      <time>15:00</time>
+      <day>15</day> <month>December</month> <year>2017</year>
+      <time>19:45</time>
     </date>
     <act>Royal Shakespeare Company</act> 
     <venue>
-      <name>Royal Shakespeare Theatre</name>
-      <location>Stratford-upon-Avon, UK</location>
+      <name>Kingspan Stadium</name>
+      <location>Belfast, Northern Ireland, UK</location>
     </venue>
-    <organiser>Royal Shakespeare Company</organiser>
+    <eventPartner>Rugby Union</eventPartner>
     <ticket amountAvailable = "800">
-      <category>Theatre</category>
-      <price>60.00</price>
+      <category>Sports</category>
+      <type price="€43.00">Grand Stand</price>
     </ticket>
   </event>
 
