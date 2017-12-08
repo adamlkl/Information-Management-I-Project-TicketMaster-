@@ -6,6 +6,7 @@
   
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT address (#PCDATA)>
+  <!ELEMENT branch (#PCDATA)>
   <!ELEMENT sortCode (#PCDATA)>
   <!ELEMENT contactDetails (email, phone_number)>
   
@@ -16,6 +17,7 @@
   <bank>
     <name>Bank of Ireland</name>
     <address>Main Street, Swords, Co. Dublin, Ireland</address>
+    <branch>Swords</branch>
     <sortCode>BOI123456</sortCode>
     <contactDetails>
       <email>bankofirelandswords@email.com</email>
@@ -26,8 +28,9 @@
   <bank>
     <name>Ulster Bank</name>
     <address>Dublin, Ireland</address>
+    <branch>Dublin</branch>
     <sortCode>UBN123456</sortCode>
-    <contact_details>
+    <contactDetails>
       <email>ulsterbankdublin@email.com</email>
       <phone_number>+353987654321</phoneNumber>
     </contactDetails>
@@ -36,8 +39,9 @@
   <bank>
     <name>Permanent TSB</name>
     <address>Cork, Ireland</address>
+    <branch>Cork</branch>
     <sortCode>TSB123456</sortCode>
-    <contact_details>
+    <contactDetails>
       <email>permanenttsbcork@email.com</email>
       <phoneNumber>+353918273645</phoneNumber>
     </contactDetails>
