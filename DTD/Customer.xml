@@ -16,20 +16,20 @@
     <age>25</age>
     <telephone>+353 20 917 9714</telephone>
     <email>DJohn@gmail.com</email>
-    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
   </customer>
   <customer accountID = "0001">
     <name>Jane Doe</name>
     <age>26</age>
     <telephone>+353 20 914 2546</telephone>
     <email>DJane@gmail.com</email>
-    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
   </customer>
   <customer accountID = "0002">
     <name>Janet Doe</name>
     <age>27</age>
     <telephone>+353 20 913 4417</telephone>
     <email>DJanet@gmail.com</email>
-    <address>15 Goldbrook Sq, Castleknock, Dublin 15</billingAddress>
+    <address>15 Goldbrook Sq, Castleknock, Dublin 15</address>
   </customer>
 </customerInfo>
