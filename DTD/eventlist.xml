@@ -3,11 +3,11 @@
 <!DOCTYPE eventlist
 [
   <!ELEMENT eventlist (event*)>
-  <!ELEMENT event (name, date, act, venue, organiser, ticket)>
+  <!ELEMENT event (name, date+, act*, venue, organiser, ticket)>
   
   <!ELEMENT name (#PCDATA)>
-  <!ELEMENT date+ (day, month, year, time)>
-  <!ELEMENT act* (#PCDATA)>
+  <!ELEMENT date (day, month, year, time)>
+  <!ELEMENT act (#PCDATA)>
   <!ELEMENT venue (name, location)>
   <!ELEMENT eventPartner (#PCDATA)>
   <!ELEMENT ticket (category, price)>
