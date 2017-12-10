@@ -10,7 +10,7 @@
   <!ELEMENT act (#PCDATA)>
   <!ELEMENT venue (name, location)>
   <!ELEMENT eventPartner (#PCDATA)>
-  <!ELEMENT ticket (category, price)>
+  <!ELEMENT ticket (category, type+)>
   
   <!ELEMENT day (#PCDATA)>
   <!ELEMENT month (#PCDATA)>
@@ -20,7 +20,7 @@
   <!ELEMENT location (#PCDATA)>
   
   <!ELEMENT category (#PCDATA)>
-  <!ELEMENT type+ (name, price)>
+  <!ELEMENT type (name, price)>
 
   <!ELEMENT price (#PCDATA)>
   <!ATTLIST type amountAvailable CDATA #REQUIRED>
