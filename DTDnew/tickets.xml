@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<!--TICKET CLASS-->
+<!--DISPLAYS THE INFORMATION OF TICKETS SOLD-->
+<!--ELEMENTS OF EACH DATA
+ 	1. event, 
+	   All tickets are being issued only where there is an event
+	2. category, 
+	   Tickets can be categorized into music, art,theatre and comedy and Sports
+	3. seat, (type, number)
+	   Every ticket only has one designated seat
+	   With the seat code and number, we can check where each customer sits during the event 
+	4. price, 
+	   Every ticket only has one unique designated price to its own seat type
+	5. time, (date, dayOfTheWeek, startTime)
+	   tickets list when its own event will take place 
+	6. location, 
+	   tickets list where its own event will take place 
+	7. eventPartner
+	   tickets are issued by one supplier, required to check 
+	   if that ticket is from the right supplier
+-->
+<!DOCTYPE Ticket_List[
+<!ELEMENT Ticket_List (ticket*)><!--THERE CAN BE A POSSIBILITY WHERE THERE ARE NO TICKETS AT ALL BEIGN SOLD-->
+<!ELEMENT ticket (event, category, seat, price, time, location, eventPartner)><!ATTLIST ticket code CDATA #REQUIRED>
+<!ELEMENT event (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT seat (type, number)><!ATTLIST seat seatCode CDATA #IMPLIED >
+<!ELEMENT type (#PCDATA)> 
+<!ELEMENT number (#PCDATA)> 
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT time (date, dayOfTheWeek, startTime)>
+<!ELEMENT date (dd,mm,yyyy)>
+<!ELEMENT dd (#PCDATA)>
+<!ELEMENT mm (#PCDATA)>
+<!ELEMENT yyyy (#PCDATA)>
+<!ELEMENT dayOfTheWeek (#PCDATA)>
+<!ELEMENT startTime (#PCDATA)><!ATTLIST startTime duration CDATA #REQUIRED>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT eventPartner (#PCDATA)> ]>
+
+<Ticket_List>
+	<ticket code="MTS180004">
+		<event>Taylor Swift Concert</event>
+		<category>Music</category>
+		<seat seatCode="PS">
+			<type>Pitch Seating</type>
+			<number>A04</number>
+		</seat>
+		<price>€144.00</price>
+		<time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="4 hours">18:00</startTime>
+		</time>
+		<location>Croke Park, James Avenue, Dublin 3</location>
+		<eventPartner>Big Machine Records</eventPartner>
+	</ticket>
+
+	<ticket code="MTS181056">
+		<event>Taylor Swift Concert</event>
+		<category>Music</category>
+		<seat seatCode="SP">
+			<type>Snake Pit</type>
+			<number>B56</number>
+		</seat>
+		<price>€124.00</price>
+		<time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="4 hours">18:00</startTime>
+		</time>
+		<location>Croke Park, James Avenue, Dublin 3</location>
+		<eventPartner>Big Machine Records</eventPartner>
+	</ticket>
+
+	<ticket code="MTS185124">
+		<event>Taylor Swift Concert</event>
+		<category>Music</category>
+		<seat seatCode="CS">
+			<type>Cusack Stand</type>
+			<number>PC124</number>
+		</seat>
+		<price>€104.00</price>
+		<time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="4 hours">18:00</startTime>
+		</time>
+		<location>Croke Park, James Avenue, Dublin 3</location>
+		<eventPartner>Big Machine Records</eventPartner>
+	</ticket>
+		
+	<ticket code="MTS180067">
+		<event>Taylor Swift Concert</event>
+		<category>Music</category>
+		<seat seatCode="PS">
+			<type>Pitch Seating</type>
+			<number>B67</number>
+		</seat>
+		<price>€148.00</price>
+		<time>
+			<date>
+				<dd>15</dd>
+				<mm>June</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="4 hours">18:00</startTime>
+		</time>
+		<location>Croke Park, James Avenue, Dublin 3</location>
+		<eventPartner>Big Machine Records</eventPartner>
+	</ticket>
+	
+	<ticket code="ADB180004">
+		<event>Kevin Hart Talk Show</event>
+		<category>Arts, Theatre and Comedy</category>
+		<seat seatCode="FS">
+			<type>Flat Seating</type>
+			<number>J04</number>
+		</seat>
+		<price>€48.00</price>
+		<time>
+			<date>
+				<dd>02</dd>
+				<mm>November</mm>
+				<yyyy>2018</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="2 hours">20:00</startTime>
+		</time>
+		<location>3Arena, N Wall Quay, North Dock, Dublin 1</location>
+		<eventPartner>Hart Beat Productions</eventPartner>
+	</ticket>
+	
+	<ticket code="ADB173074">
+		<event>Kevin Hart and Ice Cube Talk Show</event>
+		<category>Arts, Theatre and Comedy</category>
+		<seat seatCode="CS">
+			<type>Cusack Stand</type>
+			<number>LA74</number>
+		</seat>
+		<price>€114.00</price>
+		<time>
+			<date>
+				<dd>14</dd>
+				<mm>November</mm>
+				<yyyy>2017</yyyy>
+			</date>
+			<dayOfTheWeek>Thursday</dayOfTheWeek>
+			<startTime duration="2 hours">19:00</startTime>
+		</time>
+		<location>Croke Park, James Avenue, Dublin 3</location>
+		<eventPartner>Hart Beat Productions</eventPartner>
+	</ticket>
+	
+	<ticket code="SBF172054">
+		<event>European Rugby Champions Cup - Ulster Rugby vs Harlequins</event>
+		<category>Sports</category>
+		<seat seatCode="GS">
+			<type>Grand Stand</type>
+			<number>W89</number>
+		</seat>
+		<price>€43.00</price>
+		<time>
+			<date>
+				<dd>15</dd>
+				<mm>December</mm>
+				<yyyy>2017</yyyy>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime duration="3 hours">19:45</startTime>
+		</time>
+		<location>Kingspan Stadium, Belfast</location>
+		<eventPartner>Rugby Union</eventPartner>
+	</ticket>
+
+</Ticket_List>

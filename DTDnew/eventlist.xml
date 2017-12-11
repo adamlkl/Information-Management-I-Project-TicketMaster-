@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<!--EVENT LIST CLASS-->
+<!--DISPLAYS THE INFORMATION OF EVENTS HELD BY EVENT PARTNER-->
+<!--TICKETS CAN ONLY BE SOLD BY TICKETMASTER IF THE EVENT IS HELD AND ISSUED TO THEM-->
+<!--ELEMENTS OF EACH DATA
+ 	1. name, 
+	   All event must have a name with a unique id for documentation
+	2. category, 
+	   All event has its own category:
+	   music, art,theatre and comedy and Sports
+	3. time 
+	   every event has the time it starts
+	4. act 
+	   main cast of the event, can be more than one
+	   but if too many, will be left empty
+	5. venue
+	   location of event 
+	6. ticket
+	   If there is an event, surely tickets will be issued
+	   can be used to calculate total sales expected 
+	7. eventPartner
+	   Every event is organized by an event partner
+	   Can checked if a ticket issued is supplied wrongly
+-->
+<!DOCTYPE eventList[
+<!ELEMENT eventList (event*)><!--THERE CAN BE NO EVENTS AT ALL-->
+<!ELEMENT event (name, category, time, act*, venue, ticket, eventPartner)>
+<!ATTLIST event id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT time (date, dayOfTheWeek, startTime)>
+<!ELEMENT date (day, month, year)>
+<!ELEMENT act (#PCDATA)>
+<!ELEMENT venue (#PCDATA)>
+<!ELEMENT ticket (seatType+)><!ATTLIST ticket seatID CDATA #IMPLIED>
+<!--In an event, one or more types of seat will be available-->
+<!ELEMENT seatType (seatName,price,quantity)>
+<!ELEMENT seatName (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT eventPartner (#PCDATA)> ]>
+
+<eventList>
+	<event id="MTS">
+		<name>Taylor Swift Concert</name>
+		<category>Music</category>
+		<time>
+			<date>
+				<day>15</day>
+				<month>June</month>
+				<year>2018</year>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>18:00</startTime>
+		</time>
+		<act>Taylor Swift</act>
+		<venue>Croke Park, James Avenue, Dublin 3</venue>
+		<ticket>
+			<seatType seatID="PS">
+				<seatName>Pitch Standing</seatName>
+				<price>€144</price>
+				<quantity>200</quantity>
+			</seatType>
+			<seatType seatID="SP">
+				<seatName>Snake Pit</seatName>
+				<price>€134</price>
+				<quantity>500</quantity>
+			</seatType>
+			<seatType seatID="CS">
+				<seatName>Cusack Stand</seatName>
+				<price>€104</price>
+				<quantity>900</quantity>
+			</seatType>
+			<seatType seatID="DS">
+				<seatName>David Stand</seatName>
+				<price>€124</price>
+				<quantity>900</quantity>
+			</seatType>
+			<seatType seatID="HS">
+				<seatName>Hogan Stand</seatName>
+				<price>€114</price>
+				<quantity>900</quantity>
+			</seatType>	
+		</ticket>
+		<eventPartner>Big Machine Records</eventPartner>
+	</event>
+	
+	<event id="CKH">
+		<name>Kevin Hart Talk Show</name>
+		<category>Arts, Theatre and Comedy</category>
+		<time>
+			<date>
+				<day>2</day>
+				<month>November</month>
+				<year>2018</year>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>20:00</startTime>
+		</time>
+		<act>Kevin Hart</act>
+		<venue>3Arena, N Wall Quay, North Dock, Dublin 1</venue>
+		<ticket>
+			<seatType seatID="FS">
+				<seatName>Flat Seating</seatName>
+				<price>€48.00</price>
+				<quantity>200</quantity>
+			</seatType>
+			<seatType seatID="TS">
+				<seatName>Tiered Seating</seatName>
+				<price>€40.00</price>
+				<quantity>800</quantity>
+			</seatType>
+		</ticket>
+		<eventPartner>Hart Beat Productions</eventPartner>
+	</event>
+	
+	<event id="CKH">
+		<name>Kevin Hart and Ice Cube Talk Show</name>
+		<category>Arts, Theatre and Comedy</category>
+		<time>
+			<date>
+				<day>14</day>
+				<month>November</month>
+				<year>2017</year>
+			</date>
+			<dayOfTheWeek>Thursday</dayOfTheWeek>
+			<startTime>19:00</startTime>
+		</time>
+		<act>Kevin Hart</act>
+		<act>Ice Cube</act>
+		<venue>Croke Park, James Avenue, Dublin 3</venue>
+		<ticket>
+			<seatType seatID="PS">
+				<seatName>Pitch Standing</seatName>
+				<price>€108.00</price>
+				<quantity>200</quantity>
+			</seatType>
+			<seatType seatID="SP">
+				<seatName>Snake Pit</seatName>
+				<price>€98.00</price>
+				<quantity>500</quantity>
+			</seatType>
+			<seatType seatID="CS">
+				<seatName>Cusack Stand</seatName>
+				<price>€88.00</price>
+				<quantity>900</quantity>
+			</seatType>
+			<seatType seatID="DS">
+				<seatName>David Stand</seatName>
+				<price>€78.00</price>
+				<quantity>900</quantity>
+			</seatType>
+			<seatType seatID="HS">
+				<seatName>Hogan Stand</seatName>
+				<price>€68.00</price>
+				<quantity>900</quantity>
+			</seatType>	
+		</ticket>
+		<eventPartner>Hart Beat Productions</eventPartner>
+	</event>
+	
+	<event id="CKH">
+		<name>European Rugby Champions Cup - Ulster Rugby vs Harlequins</name>
+		<category>Sports</category>
+		<time>
+			<date>
+				<day>15</day>
+				<month>December</month>
+				<year>2017</year>
+			</date>
+			<dayOfTheWeek>Friday</dayOfTheWeek>
+			<startTime>19:45</startTime>
+		</time>
+		<venue>Kingspan Stadium, Belfast</venue>
+		<ticket>
+			<seatType seatID="GS">
+				<seatName>Grand Stand</seatName>
+				<price>€48.00</price>
+				<quantity>1200</quantity>
+			</seatType>
+			<seatType seatID="MS">
+				<seatName>Memorial Stand</seatName>
+				<price>€38.00</price>
+				<quantity>2000</quantity>
+			</seatType>
+			<seatType seatID="FS">
+				<seatName>Family Stand</seatName>
+				<price>€18.00</price>
+				<quantity>3000</quantity>
+			</seatType>
+		</ticket>
+		<eventPartner>Rugby Union</eventPartner>
+	</event>
+	
+</eventList>

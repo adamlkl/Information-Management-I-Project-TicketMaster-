@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CUSTOMER CLASS-->
+<!--DISPLAYS PERSONAL DETAILS OF CUSTOMERS-->
+<!--EACH CUSTOMER HAVE TO CREATE AN ACCOUNT TO PURCHASE TICKETS, 
+THEREFORE THEY ALL HAVE THEIR OWN ACCOUNT ID-->
+<!--ELEMENTS OF EACH DATA
+ 	1. name, 
+	   name of the customer 
+	   has an attribute of title 
+	2. age
+	   age of customer
+	3. gender 
+	   gender of customer
+	4. birthday
+	   birthday of customer 
+	5. telephone
+	   Contact Number of customer 
+	   extension number as an attribute since the customer can be from 
+	   overseas
+	6. email 
+	   email address of customer 
+	7. billing address
+	   address of customer
+	   receipt and ticket are sent to the customer to this address 
+	   they are sent when customer's payment is verified 
+-->
+<!DOCTYPE customerInfo [ <!ELEMENT customerInfo (customer)*>
+<!--NUMBER OF CUSTOMERS CAN ALSO BE 0 OR MORE-->
+<!ELEMENT customer (name, age, gender, birthday, telephone, email, billingAddress)>
+<!ELEMENT name (#PCDATA)><!ATTLIST name title CDATA #REQUIRED>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender ( m | f )>
+<!ELEMENT birthday ( day, month, year )>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)><!ATTLIST telephone extensionNumber CDATA #REQUIRED>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST customer accountID CDATA #REQUIRED>
+]>
+
+<customerInfo>
+  <customer accountID = "10000000">
+    <name title="Mr">BILL GATES</name>
+    <age>62</age>
+    <gender>m</gender>
+    <birthday>
+    	<day>28</day>
+    	<month>October</month>
+    	<year>1955</year>
+    </birthday>
+    <telephone extensionNumber="+1">3152331080</telephone>
+    <email>bgates@gmail.com</email>
+    <address>1065 La Avenida - Building One, Mountain View, CA 94043</address>
+  </customer>
+  
+  <customer accountID = "78780001">
+    <name title="Miss">JOAN SMALLS</name>
+    <age>29</age>
+    <gender>f</gender>
+    <birthday>
+    	<day>11</day>
+    	<month>July</month>
+    	<year>1988</year>
+    </birthday>
+    <telephone extensionNumber="+1">7323585180</telephone>
+    <email>jsmalls@gmail.com</email>
+    <address>865 W El Camino, Sunnyvale, CA</address>
+  </customer>
+  
+  <customer accountID = "00003402">
+    <name title="Mr">MA HUA TENG</name>
+    <age>46</age>
+    <gender>m</gender>
+    <birthday>
+    	<day>29</day>
+    	<month>October</month>
+    	<year>1971</year>
+    </birthday>
+    <telephone extensionNumber="+86">075586013388</telephone>
+    <email>huateng@qq.com</email>
+    <address>Tencent Building, Kejizhongyi Avenue, Hi-tech Park, Nanshan District, Shenzhen</address>
+  </customer>
+  
+   <customer accountID = "00007878">
+    <name title="Mrs">WEN XIA YU</name>
+    <age>28</age>
+    <gender>f</gender>
+    <birthday>
+    	<day>6</day>
+    	<month>August</month>
+    	<year>1989</year>
+    </birthday>
+    <telephone extensionNumber="+1">6506931001</telephone>
+    <email>xiawen@gmail.com</email>
+    <address>1854 W El Camino, Mountain View, CA</address>
+  </customer>
+  
+   <customer accountID = "50004047">
+    <name title="Mr">TOBIAS HALLEN</name>
+    <age>20</age>
+    <gender>m</gender>
+    <birthday>
+    	<day>18</day>
+    	<month>January</month>
+    	<year>1997</year>
+    </birthday>
+    <telephone extensionNumber="+353">878645564</telephone>
+    <email>thallen@tcd.ie</email>
+    <address>College Green, Dublin 2</address>
+  </customer>
+  
+</customerInfo>

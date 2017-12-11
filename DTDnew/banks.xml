@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!--BANK CLASS-->
+<!--DISPLAYS THE INFORMATION OF BANKS THAT ARE AUTHENTICATING PAYMENT OF CUSTOMER-->
+<!--ELEMENTS OF EACH DATA
+ 	1. name, 
+	   All banks must have a name 
+	   to trace back where to validate the payment
+	2. branch, 
+	   Every payment account is dealt by one of the branches of a bank
+	   and every branch must have a sort code
+	3. address 
+	   Every branch of bank has to have its own unique address
+	4. contactdetails 
+	   Different banks have different ways of contact 
+-->
+<!DOCTYPE banks[
+  <!ELEMENT banks (bank*)><!--If there are no payments, banks wont be authenticating anything-->
+  <!ELEMENT bank (name, branch, address, contactDetails)>
+  
+  <!ELEMENT name (#PCDATA)><!ATTLIST name code CDATA #REQUIRED>
+  <!ELEMENT branch (#PCDATA)> <!ATTLIST branch sortCode CDATA #REQUIRED>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT contactDetails (email, phone_number)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT phoneNumber (#PCDATA)>
+]>
+<banks>
+  <bank>
+    <name code="BOI">Bank of Ireland</name>
+	<branch sortCode="BOI345">Swords</branch>
+    <address>Main Street, Swords, Co. Dublin, Ireland</address>
+    <contactDetails>
+      <email>bankofirelandswords@boi.ie</email>
+      <phoneNumber>+353123456789</phoneNumber>
+    </contactDetails>
+  </bank>
+
+  <bank>
+    <name code="UB">Ulster Bank</name>
+	<branch sortCode="UBN123">Dublin</branch>
+    <address>Dublin, Ireland</address>    
+    <contactDetails>
+      <email>ulsterbankdublin@ub.ie</email>
+      <phoneNumber>+353987654321</phoneNumber>
+    </contactDetails>
+  </bank>
+  
+  <bank>
+    <name code="PTSB">Permanent TSB</name>
+	<branch sortCode="TSB321">Cork</branch>
+    <address>Cork, Ireland</address>  
+    <contactDetails>
+      <email>permanenttsbcork@ptsb.ie</email>
+      <phoneNumber>+353918273645</phoneNumber>
+    </contactDetails>
+  </bank>
+  
+  <bank>
+    <name code="BOA">Bank of America</name>
+	<branch sortCode="BOA456">New York</branch>
+    <address>New York, U.S.A.</address>   
+    <contactDetails>
+      <email>BOANewYork@boa.us</email>
+      <phoneNumber>+12918273645</phoneNumber>
+    </contactDetails>
+  </bank>
+  
+  <bank>
+    <name code="BOC">Bank of China</name>
+	<branch sortCode="BOC910">Shang Hai</branch>
+    <address>200 MID.YINCHENG RD., PUDONG NEW DISTRICT, SHANGHAI 200121,CHINA</address>  
+    <contactDetails>
+      <email>BOCShangHai@boc.com</email>
+      <phoneNumber>(86)021-38824588</phoneNumber>
+    </contactDetails>
+  </bank>
+  
+</banks>

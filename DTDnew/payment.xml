@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<!--PAYMENT CLASS-->
+<!--DISPLAYS DETAILS OF PAYMENT-->
+<!--ELEMENTS OF EACH DATA
+ 	1. debit/credit 
+	   type of payment card 
+	2. card number 
+	   card number used 
+	3. cardHolderName
+	   payee's/customer's name
+	   can be used to check which seat is occupied by who from by checking the name
+	4. expiryDate
+	   expiry date of the card
+	5. securityCode
+	   security code of card 
+	6. bank
+	   bank verifying the card payment
+	7. paymentAmount
+	8. status
+	   verified or rejected or not verified 
+	   if verified, only can the ticket be shipped 
+	   otherwise do nothing
+	9. authenticationCode
+	   authentication code of card 
+-->
+<!DOCTYPE payment_list[
+<!ELEMENT payment_list (payment+)>
+<!ELEMENT payment ( debit | credit )><!ATTLIST payment code CDATA #REQUIRED>
+<!ELEMENT debit (cardNumber, cardHolderName, expiryDate, securityCode, bank, paymentAmount, status)>
+<!ELEMENT credit (cardNumber, cardHolderName, expiryDate, securityCode, authenticationCode, bank, paymentAmount, status)>
+<!ELEMENT cardNumber (#PCDATA)>
+<!ELEMENT cardHolderName (#PCDATA)>
+<!ELEMENT expiryDate (mm,yy)>
+<!ELEMENT mm (#PCDATA)>
+<!ELEMENT yy (#PCDATA)>
+<!ELEMENT securityCode (#PCDATA)>
+<!ELEMENT bank (#PCDATA)><!ATTLIST bank sortCode CDATA #REQUIRED>
+<!ELEMENT paymentAmount (#PCDATA)>
+<!ELEMENT authenticationCode (#PCDATA)>
+<!ELEMENT status ( verified | rejected )>]>
+
+<payment_list>
+	<payment code="D0001">
+			<debit>
+				<cardNumber>1234 5666 7897 5647</cardNumber>
+				<cardHolderName>JOAN SMALLS</cardHolderName>
+				<expiryDate>
+					<mm>07</mm>
+					<yy>18</yy>
+				</expiryDate>
+				<securityCode>657</securityCode>
+				<bank sortCode="BOA456">Bank of America</bank>
+				<paymentAmount>€104.00</paymentAmount>
+				<status>verified</status>
+			</debit>
+	</payment>
+<!--TODO-->
+	<payment code="D0002">
+			<debit>
+				<cardNumber>1234 5789 1011 1213</cardNumber>
+				<cardHolderName>BILL GATES</cardHolderName>
+				<expiryDate>
+					<mm>05</mm>
+					<yy>23</yy>
+				</expiryDate>
+				<securityCode>234</securityCode>
+				<bank sortCode="BOA456">Bank of America</bank>
+				<paymentAmount>€48.00</paymentAmount>
+				<status>verified</status>
+			</debit>
+	</payment>
+	
+	<payment code="D0003">
+			<debit>
+				<cardNumber>1989 0823 2380 9891</cardNumber>
+				<cardHolderName>WEN XIA YU</cardHolderName>
+				<expiryDate>
+					<mm>08</mm>
+					<yy>23</yy>
+				</expiryDate>
+				<securityCode>989</securityCode>
+				<bank sortCode="BOC910">Bank of China</bank>
+				<paymentAmount>€124.00</paymentAmount>
+				<status> not verified</status>
+			</debit>
+	</payment>
+	
+	<payment code="C0001">
+			<credit>
+				<cardNumber>1955 1028 6290 1994</cardNumber>
+				<cardHolderName>BILL GATES</cardHolderName>
+				<expiryDate>
+					<mm>10</mm>
+					<yy>20</yy>
+				</expiryDate>
+				<securityCode>901</securityCode>
+				<authenticationCode>603498</authenticationCode>
+				<bank sortCode="BOA456">Bank of America</bank>
+				<paymentAmount>€114.00</paymentAmount>
+				<status>rejected</status>
+			</credit>
+	</payment>
+	
+	<payment code="C0002">
+			<credit>
+				<cardNumber>1971 1029 4642 2017</cardNumber>
+				<cardHolderName>MA HUA TENG</cardHolderName>
+				<expiryDate>
+					<mm>10</mm>
+					<yy>20</yy>
+				</expiryDate>
+				<securityCode>420</securityCode>
+				<authenticationCode>987654</authenticationCode>
+				<bank sortCode="BOC910">Bank of China</bank>
+				<paymentAmount>€144.00</paymentAmount>
+				<status>verified</status>
+			</credit>
+	</payment>
+		
+	<payment code="C0003">
+			<credit>
+				<cardNumber>1971 1029 4642 2017</cardNumber>
+				<cardHolderName>TOBIAS HALLEN</cardHolderName>
+				<expiryDate>
+					<mm>01</mm>
+					<yy>22</yy>
+				</expiryDate>
+				<securityCode>567</securityCode>
+				<authenticationCode>444444</authenticationCode>
+				<bank sortCode="BOI345">Bank of Ireland</bank>
+				<paymentAmount>€43.00</paymentAmount>
+				<status>verified</status>
+			</credit>
+	</payment>
+	
+</payment_list>

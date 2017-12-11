@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<!--MAINTAINENCE OPERATOR CLASS-->
+<!--DISPLAYS PERSONAL DETAILS OF MAINTAINENCE OPERATOR-->
+<!--ELEMENTS OF EACH DATA
+ 	1. name, 
+	   name of the operator
+	2. sex
+	   sex of operator
+	3. site responsible
+	   working site of operator
+	   every operator must hae their own working id 
+	4. schedule
+	   working schedule of operator 
+	5. salary
+	   salary of operator
+	6. performance 
+	   feedback of operator performance measured in grades
+	-->
+<!DOCTYPE Maintenence_Operators[
+<!ELEMENT Maintenence_Operators (Maintenence_Operator+)>
+<!ELEMENT Maintenence_Operator (name, sex, site_responsible, schedule, salary, performance)>
+<!ATTLIST Maintenence_Operator gender ( m | f ) #REQUIRED>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT name (firstName,lastname)><!ATTLIST name title CDATA #REQUIRED>
+<!ELEMENT site_responsible (#PCDATA)><!ATTLIST site_responsible workingID CDATA #REQUIRED>
+<!ELEMENT workingDays (#PCDATA)>
+<!ELEMENT workingHours (#PCDATA)>
+<!ELEMENT schedule (workingDays+, workingHours)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT performance (#PCDATA)>]>
+
+<Maintenence_Operators>
+
+	<Maintenence_Operator gender="m">
+		<name title="Mr">
+			<firstName>Hugh</firstName> 
+			<lastName>Jackman</lastName>
+		</name>
+		<site_responsible id="34949">Ticket Updates</site_responsible>
+		<schedule>
+			<workingDays>Monday</workingDays>
+			<workingDays>Tuesday</workingDays>
+			<workingDays>Wednesday</workingDays>
+			<workingDays>Thursday</workingDays>
+			<workingHours>09:00-17:00</workingHours>
+		</schedule>
+		<salary>€4000</salary>
+		<performance>A</performance>
+	</Maintenence_Operator>
+	
+	<Maintenence_Operator gender="m">
+		<name title="Mr">
+			<firstName>Chuck</firstName> 
+			<lastName>Noris</lastName>
+		</name>
+		<site_responsible id="35123">Ticket Sales</site_responsible>
+		<schedule>
+			<workingDays>Tuesday</workingDays>
+			<workingDays>Wednesday</workingDays>
+			<workingDays>Thursday</workingDays>
+			<workingDays>Friday</workingDays>
+			<workingHours>10:00-18:00</workingHours>
+		</schedule>
+		<salary>€3000</salary>
+		<performance>B+</performance>
+	</Maintenence_Operator>
+	
+	<Maintenence_Operator gender="m">
+		<name title="Mr">
+			<firstName>Russell</firstName> 
+			<lastName>Crowe</lastName>
+		</name>
+		<site_responsible id="36678">Ticket Display</site_responsible>
+		<schedule>
+			<workingDays>Monday</workingDays>
+			<workingDays>Tuesday</workingDays>
+			<workingDays>Wednesday</workingDays>
+			<workingDays>Thursday</workingDays>
+			<workingDays>Friday</workingDays>
+			<workingHours>10:00-18:00</workingHours>
+		</schedule>
+		<salary>€5000</salary>
+		<performance>A+</performance>
+	</Maintenence_Operator>
+	
+	<Maintenence_Operator gender="f">
+		<name title="Miss">
+			<firstName>Julia</firstName> 
+			<lastName>Roberts</lastName>
+		</name>
+		<site_responsible id="34248">Ticket Sales</site_responsible>
+		<schedule>
+			<workingDays>Monday</workingDays>
+			<workingDays>Wednesday</workingDays>
+			<workingDays>Friday</workingDays>
+			<workingDays>Sunday</workingDays>
+			<workingHours>18:00-06:00</workingHours>
+		</schedule>
+		<salary>€4500</salary>
+		<performance>A+</performance>
+	</Maintenence_Operator>
+	
+	<Maintenence_Operator gender="f">
+		<name title="Mrs">
+			<firstName>Sui</firstName> 
+			<lastName>He</lastName>
+		</name>
+		<site_responsible id="39949">Ticket Sales</site_responsible>
+		<schedule>
+			<workingDays>Saturday</workingDays>
+			<workingDays>Sunday</workingDays>
+			<workingHours>09:00-17:00</workingHours>
+		</schedule>
+		<salary>€2700</salary>
+		<performance>B+</performance>
+	</Maintenence_Operator>
+	
+</Maintenence_Operators>

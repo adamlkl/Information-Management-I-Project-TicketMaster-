@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EVENT PARTNER/TICKET SUPPLIER CLASS-->
+<!--Only display the event partners of TicketMaster Entertainment.Inc 
+and the type of events they organised but not what event they organise-->
+<!--ELEMENTS OF EACH DATA
+ 	1. name, 
+	   name of the supplier company
+	   has an attribute of id to be used for record in TicketMaster 
+	2. event, 
+	   types of event it organizes 
+	   can be categorized into music, art,theatre and comedy and Sports
+	3. address 
+	   address of the event partner 
+	4. country 
+	   country in which the event partner resides 
+	5. telephone
+	   Contact Number of event partner 
+	   extension number as an attribute since the company can be from 
+	   overseas
+	6. email 
+	   email address of event partner 
+-->
+<!DOCTYPE ticketSupplierInfo [ <!ELEMENT ticketSupplierInfo (ticketSupplier*)>
+<!--THERE CAN BE NO TICKET SUPPLIER(TICKET MASTER WILL BE BROKE IF THT EVER HAPPPENS)-->
+<!--IF THERE ARE NO TICKET SUPPLIER, THERE WILL AUTOMATICALLY BE NO EVENTS AND TICKETS-->
+<!ELEMENT ticketSupplier (name, event, address, country, telephone, email)><!ATTLIST ticketSupplier id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT event (#PCDATA)><!ATTLIST event category CDATA #REQUIRED>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)><!ATTLIST telephone extensionNumber CDATA #REQUIRED>
+<!ELEMENT email (#PCDATA)>
+]>
+
+<ticketSupplierInfo>
+  <ticketSupplier id="M0001">
+    <name>Big Machine Records</name>
+    <event category="Music">Music Concert</event>
+    <address>Nashville, Tennessee, U.S</address>
+    <country>USA</country>
+    <telephone extensionNumber="+1">8665047199</telephone>
+    <email>mail@bigmachine.us</email>
+  </ticketSupplier>
+  
+  <ticketSupplier id="M0002">
+    <name>Hart Beat Productions</name>
+    <event category="Arts, Theatre and Comedy">Talk Show</event>
+    <address>9460 Wilshire Blvd. 7th Floor Beverly Hills, California</address>
+    <country>USA</country>
+    <telephone extensionNumber="+1">8665047243</telephone>
+    <email>mail@hartbeat.us</email>
+  </ticketSupplier>
+  
+  <ticketSupplier id="M0003">
+    <name>Rugby Union</name>
+    <event category="Sports"></event>
+    <address>World Rugby House, 8-10 Pembroke Street Lower, Dublin</address>
+    <country>IRELAND</country>
+    <telephone extensionNumber="+353">012409200</telephone>
+    <email>mail@worldrugby.ie</email>
+  </ticketSupplier>
+</ticketSupplierInfo>
