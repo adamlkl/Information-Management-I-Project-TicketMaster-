@@ -16,16 +16,181 @@
 }</customerList>
  
  
-  <customerList>
+ <ticketList>
  { 
    for $x in /ticketSupplierInfo/ticketSupplier,
        $y in /eventList/event,
        $z in /Ticket_List/ticket
        where $x/name = $y//eventPartner and  $y/name = $z/event
        return
-            <customer>
+            <ticket>
                 <ticketID>{$z/string(@code)}</ticketID>
                 {$y/name}
-                <issuedBy>{$x/name}</issuedBy>
+                <issuedBy>{$z/string(eventPartner)}</issuedBy>
+                <check>{matches($x/string(name),$z/string(eventPartner))}</check>
+            </ticket>                                                 
+}</ticketList>
+
+
+ <customerList>
+ { 
+   for $x in /customerInfo/customer,
+       $y in /payment_list/payment,
+       $z in /banks/bank
+       where $x/name = $y//cardHolderName and 
+	     $y//bank = $z//name and 
+	     $y//status = "verified"
+       return
+            <customer>
+                <name>{string-join(($x/name/string(@title),string($x/name)),' ')}</name>
+                <paymentAuthenticator>{$z/string(name)}</paymentAuthenticator>
+                {$y//paymentAmount}
             </customer>                                                 
 }</customerList>
+
+
+ <operatorList>
+ { 
+   for $x in /Maintenence_Operators/Maintenence_Operator
+
+       where $x/number(substring(salary,2)) >= 3000 
+       order by $x/name
+       return
+            <operator>
+                <name>{string-join(($x/name/string(@title),string($x/name)),' ')}</name>
+               {$x/salary}
+               {$x/site_responsible}
+               <raise>
+               {
+                 if ($x/contains(string(performance),'A'))
+                 then 'eligible'
+                 else 'not eligible'
+               }
+               </raise>
+            </operator>                                                 
+}
+</operatorList>
+
+
+ <CrokeParkEvent>
+ { 
+   for $x in //eventList/event
+
+       where $x/contains(venue,'Croke Park') 
+       order by $x/name
+       return
+       <event>
+            {$x/name}   
+            {
+            if ($x/count(act)>1)    
+            then 
+            <act>{$x/string-join((string(act[1]),string(act[2])), ' and ')}</act>
+            else 
+            $x/act}   
+            {$x/venue}
+      </event>                                     
+}
+</CrokeParkEvent>
+
+
+ <eventList>
+ { 
+   for $y in //eventList/event
+   let $x := $y/ticket/seatType
+         order by $y/name
+       return
+       <event>
+            {$y/@id}
+            <name category="{$y/category}">{$y/string(name)}</name>   
+            <maxprice>{max($x/number(substring(price,2)))}</maxprice>
+      </event>                                     
+}
+</eventList>
+
+
+ <eventList>
+ { 
+   for $y in //eventList/event
+   let $x := $y/ticket/seatType
+         order by $y/name
+       return
+       <event>
+            {$y/@id}
+            <name category="{$y/category}">{$y/string(name)}</name>   
+            <totalsales currency = 'euro'>
+              {concat('€',sum($x/(number(substring(price,2)) * number(quantity))))}
+            </totalsales>
+      </event>                                     
+}
+</eventList>
+
+
+ <eventList>
+ { 
+   for $y in //eventList/event
+   where $y/matches(string(category),'Arts, Theatre and Comedy')
+   let $x := $y/ticket/seatType
+         order by $y/name
+       return
+       <event>
+          {$y/@id}
+          {$y/name}
+          {$y/act}
+          <date>
+          {$y/time/concat(string-join((string(date/day),string(date/month),string(date/year)),'-'),', ',string(dayOfTheWeek))}
+          </date>
+          <time>{$y/time/startTime}</time>
+          {$y/venue}
+          <seatsAvailable>
+              {sum($x/number(quantity))}
+          </seatsAvailable>
+      </event>                                     
+}
+</eventList>
+
+
+ <ticketList>
+ { 
+   for $y in //Ticket_List/ticket
+       return
+       <ticket>
+          {$y/@code}
+          {$y/event}
+          {$y/price}
+          {if ($y/number(substring(string(price),2))>100)
+          then 
+          <type>VIP</type>
+          else 
+          <type>normal</type>}
+      </ticket>                                     
+}
+</ticketList>
+
+
+ <ticketToBeShipped>
+ { 
+     for $x in /customerInfo/customer,
+       $y in /payment_list/payment,
+       $z in /Ticket_List/ticket
+       where $x/name = $y//cardHolderName and $y//paymentAmount = $z//price
+       return     
+       <ticket>     
+          <customer>
+          {string-join(($x/name/string(@title),string($x/name)),' ')}
+          </customer>
+          <ticket>{$z/event}</ticket>
+          { if ($y//string(status)="verified")
+          then 
+         <shippingStatus>ready</shippingStatus>
+          else 
+         <shippingStatus>awaiting payment</shippingStatus>
+         }
+         { if ($y//string(status)="verified")
+          then 
+          <billingaddress>{$x/address}</billingaddress>
+          else 
+          <billingaddress>---</billingaddress>
+         }
+      </ticket>                                     
+}
+</ticketToBeShipped>
