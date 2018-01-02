@@ -1,0 +1,31 @@
+ <customerList>
+ { 
+   for $x in /customerInfo/customer,
+       $y in /payment_list/payment,
+       $z in /Ticket_List/ticket
+       where $x/name = $y//cardHolderName and $y//paymentAmount = $z//price
+       return
+            <customer>
+                {$x/name} 
+                {$z/event}
+                <seatNumber>
+                    {$z/seat/string(@seatCode)}
+                    {$z/seat/number/text()}
+                </seatNumber>
+            </customer>                                                 
+}</customerList>
+ 
+ 
+  <customerList>
+ { 
+   for $x in /ticketSupplierInfo/ticketSupplier,
+       $y in /eventList/event,
+       $z in /Ticket_List/ticket
+       where $x/name = $y//eventPartner and  $y/name = $z/event
+       return
+            <customer>
+                <ticketID>{$z/string(@code)}</ticketID>
+                {$y/name}
+                <issuedBy>{$x/name}</issuedBy>
+            </customer>                                                 
+}</customerList>
